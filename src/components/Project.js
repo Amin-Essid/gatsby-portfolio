@@ -5,7 +5,7 @@ import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 const Project = ({description, title,github, url, stack, image, index}) => {
   return <article className="project">
     {
-      image &&
+      image && 
       <Image fluid={image.childImageSharp.fluid} className='project-img' />
     }
     <div className="project-info">
@@ -22,8 +22,8 @@ const Project = ({description, title,github, url, stack, image, index}) => {
         }
       </div>
       <div className="project-links">
-        <a href={github}><FaGithubSquare className='project-icon'/></a>
-        <a href={url}><FaShareSquare className='project-icon'/></a>
+        <a  href={github} target="_blank"><FaGithubSquare className='project-icon'/></a>
+        <a href={url} target="_blank"><FaShareSquare className='project-icon'/></a>
       </div>
     </div>
   </article>

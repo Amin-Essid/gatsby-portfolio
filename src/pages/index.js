@@ -25,13 +25,14 @@ export default ({data}) => {
 
 export const query = graphql`
   {
-    allStrapiProjects(filter: {featured: {eq: true}}) {
+    allStrapiProjects(sort: {order: ASC, fields: projectID}, filter: {featured: {eq: true}}) {
       nodes {
         github
         id
         description
         title
         url
+        projectID
         image {
           childImageSharp {
             fluid {

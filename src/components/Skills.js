@@ -33,7 +33,7 @@ const Skills = () => {
   const data = useStaticQuery(query)
   const {allStrapiSkills: {nodes: skills}} = data;
   const [value, setValue] = React.useState(0);
-  const {largeImage} = skills[value]; 
+  const {largeImage, smallImage} = skills[value]; 
   return <section className="section">
     <Title title='skills'/>
     <div className="skills-center">
@@ -49,10 +49,11 @@ const Skills = () => {
       </div>
       <article className='skill-info'>   
         <Image fluid={largeImage.childImageSharp.fluid} className='skill-largeImage'/>
+        <Image fluid={smallImage.childImageSharp.fluid} className='skill-smallImage'/>
       </article>
     </div>
-    <Link to='/about' className='btn center-btn'>
-    more info</Link>
+    <Link to='/contact' className='btn center-btn'>
+    contact me</Link>
   </section>
 }
 

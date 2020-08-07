@@ -16,13 +16,14 @@ const ProjectsPage = ({
 
 export const query = graphql`
   {
-    allStrapiProjects {
+    allStrapiProjects(sort: {order: ASC, fields: projectID},) {
       nodes {
         github
         id
         description
         title
         url
+        projectID
         image {
           childImageSharp {
             fluid {
