@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import Image from 'gatsby-image'
 import SEO from '../components/SEO'
 const About = ({data:{about:{nodes}}}) => {
-const {title, stack, image, info} = nodes[0]
+const {title, stack, image} = nodes[0]
   return <Layout>
     <SEO title='About' description='about me'/>
     <section className="about-page">

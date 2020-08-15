@@ -10,7 +10,7 @@ const contact = () => {
           <div className="form-group">
             <input type="text" name='name' placeholder='name' className="form-control"/>
             <input type="email" name="email" placeholder='email' className="form-control"/>
-            <textarea name='message' rows='5' name='message' placeholder='message' className="form-control"/>
+            <textarea name='message' rows='5' placeholder='message' className="form-control"/>
           </div>
           <button type="submit" className="submit-btn btn">
             submit here

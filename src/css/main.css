@@ -676,6 +676,7 @@ Skills
 }
 .active-btn {
   color: var(--clr-primary-5);
+  background-color: white;
   box-shadow: 0 2px var(--clr-primary-5);
 }
 .skill-info {
@@ -1030,6 +1031,7 @@ About Page
   }
   .about-img {
     grid-column: 1 / span 3;
+    align-self: start;
     margin-bottom: 0;
   }
   .about-text {

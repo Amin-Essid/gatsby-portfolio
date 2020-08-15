@@ -34,7 +34,7 @@ const SEO = ({title, description}) => {
     <meta name='twitter:title' content={siteTitle} />
     <meta name='twitter:description' content={siteDesc} />
     <meta name='twitter:image' content={`${siteUrl}${image}`} />
-    <meta property="og:url" content="Ameen.netlify.app" />
+    <meta property="og:url" content="ameen.netlify.app" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={siteDesc} />
