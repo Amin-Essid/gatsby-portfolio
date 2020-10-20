@@ -129,7 +129,7 @@ p {
 
 .btn {
   text-transform: uppercase;
-  background: #E04635;
+  background: #e04635;
   color: var(--clr-primary-9);
   padding: 0.375rem 0.75rem;
   letter-spacing: var(--spacing);
@@ -435,10 +435,10 @@ Hero
   color: var(--clr-grey-5);
   font-size: 1.2rem;
 }
-.hero-description{
+.hero-description {
   width: 100%;
 }
-.hero-description a{
+.hero-description a {
   margin-top: 1.5em;
   color: var(--clr-grey-5);
   font-weight: bold;
@@ -474,8 +474,8 @@ Hero
   }
   .hero-img {
     display: block;
-    width: 545px;
-    height: 515px;
+    width: 100%;
+    height: 100%;
     grid-row: 1/1;
     grid-column: 7/-1;
   }
@@ -495,8 +495,6 @@ Hero
     line-height: 1;
   }
 }
-
-
 
 /*
 =============== 
@@ -682,10 +680,10 @@ Skills
 .skill-info {
   margin-bottom: 35px;
 }
-.skill-largeImage{
+.skill-largeImage {
   display: none;
 }
-.skill-smallImage{
+.skill-smallImage {
   display: block;
 }
 @media screen and (min-width: 992px) {
@@ -708,10 +706,10 @@ Skills
   .skill-btn:hover {
     box-shadow: -2px 0 var(--clr-primary-5);
   }
-  .skill-smallImage{
+  .skill-smallImage {
     display: none;
   }
-  .skill-largeImage{
+  .skill-largeImage {
     display: block;
   }
 }
