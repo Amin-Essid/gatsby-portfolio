@@ -6,10 +6,17 @@ import SocialLinks from "../constants/socialLinks"
 // ...GatsbyImageSharpFixed
 const query = graphql`
   {
-    file(relativePath: { eq: "hero-img.png" }) {
+    skillsMap: file(relativePath: { eq: "hero-img.png" }) {
       childImageSharp {
         fixed(width: 600, height: 490) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    myPhoto: file(relativePath: { eq: "myphoto.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -18,18 +25,36 @@ const query = graphql`
 
 const Hero = () => {
   const {
-    file: {
-      childImageSharp: { fixed },
+    skillsMap: {
+      childImageSharp: { fixed: fixedSkillsMap },
+    },
+    myPhoto: {
+      childImageSharp: { fluid: fluidMyPhoto },
     },
   } = useStaticQuery(query)
+  // const {
+  //   myPhoto: {
+  //     childImageSharp: { fluid: fluidMyPhoto },
+  //   },
+  // } = useStaticQuery(query)
   return (
     <header className="hero">
       <div className="section-center hero-center">
         <article className="hero-info">
           <div>
             <div className="underline"></div>
-            <h1>I'm Ameen</h1>
-            <h4>full-stack web developer and UI/UX designer</h4>
+            <div className="hero-profile">
+              <div className="hero-profile_pic">
+                <Image fluid={fluidMyPhoto} />
+              </div>
+              <div className="hero-profile_info">
+                <h1>I'm Ameen</h1>
+                <h4>
+                  fullstack web developer <br />
+                  and UI/UX designer
+                </h4>
+              </div>
+            </div>
             <p className="hero-description">
               I can talk about myself all the day. But I will just repeat what
               Patrick Winston said : ‘Your success in life will be determined
@@ -53,7 +78,9 @@ const Hero = () => {
             <SocialLinks />
           </div>
         </article>
-        <Image fixed={fixed} className="hero-img" />
+        <div className="hero-img">
+          <Image fixed={fixedSkillsMap} />
+        </div>
       </div>
     </header>
   )
